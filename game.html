@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <title>Fast Driving</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+<!-- Message box in top of the gameBar. -->
+<div id="info-box"></div>
+
+<!-- Level box for show level in top right of game bar. -->
+<div id="level-box">
+    <p>زمان مانده
+        <br><span id="time-left">123</span></p>
+    <p>سطح
+        <br><span id="level">31</span></p>
+</div>
+
+<!-- All object in game. -->
+<div id="game">
+    <img id="r1" src="assets/graphic/r1.jpg" alt="Road">
+    <img id="r2" src="assets/graphic/r1.jpg" alt="Road">
+    <img id="e1" src="assets/graphic/e2.png" alt="enemy">
+    <img id="e2" src="assets/graphic/e2.png" alt="enemy">
+    <img id="car" src="assets/graphic/c1.png" alt="My Car">
+    <img alt="left" src="assets/graphic/arrow-alt-circle-left.svg" onclick="goLeft()" id="goLeft">
+    <img alt="right" src="assets/graphic/arrow-alt-circle-right.svg" onclick="goRight()" id="goRight">
+</div>
+
+<!-- This is the start Page. -->
+<div class="intro" id="start-box">
+    <div class="form">
+        <h1>رانندگی سریع</h1>
+        <h5>ورژن: ۱.۴</h5>
+        <button onclick="start()"><span>شروع بازی</span></button>
+    </div>
+    <div class="hoverShadow"></div>
+    <footer>طراحی و توسعه: محمد حسین مرادی</footer>
+</div>
+
+<!-- Is showing your level and most level of your after game over. -->
+<div class="intro" id="game-lose">
+    <span class="hoverShadowTop"></span>
+    <div class="lose-box">
+        <div class="record-box">
+            <div class="row">
+                <div class="col-50"> رکورد شما
+                    <br><span id="record">08</span><br></div>
+                <div class="col-50">
+                    بالا‌ترین رکورد شما
+                    <br><span id="most-record">11</span>
+                </div>
+            </div>
+        </div>
+        <h1>ماشالله دست فرمون</h1>
+        <h5>دوباره تلاش کن، تو می‌تونی رکورد بالاتری رو به نام خودت ثبت کنی.</h5>
+        <button onclick="gameLoseHide()"><span>تلاش دوباره</span></button>
+    </div>
+    <div class="hoverShadow"></div>
+    <footer>طراحی و توسعه: محمد حسین مرادی</footer>
+</div>
+
+<!-- The javascript code. This is a core of game. -->
+<script src="game.js"></script>
+</body>
+</html>
