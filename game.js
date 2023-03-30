@@ -333,6 +333,8 @@ function collision(elementA, elementB) {
     if (xB <= xA2 && xB2 >= xA) {
         // y axis
         if (yB <= yA2 && yB2 >= yA) {
+            // moving my car.
+            ts.translateByIDAndSpeed(0, 120, "car", 2);
             // collision is true.
             playGame = false;
             gameLoseShow();
@@ -488,6 +490,7 @@ function gameLoseHide() {
     gameLoseBox.style.transform = "scale(2)";
 
     setTimeout(function () {
+        ts.translate(0, -120);
         gameLoseBox.style.display = "none";
         setDefault();
         playGame = true;
